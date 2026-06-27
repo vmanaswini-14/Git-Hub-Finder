@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHub Profile Finder</title>
+  <link rel="stylesheet" href="GitFinder.css">
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub Profile Finder</h1>
+
+    <div class="search-row">
+      <input type="text" id="usernameInput" placeholder="Enter GitHub username..." />
+      <button onclick="searchUser()">Search</button>
+    </div>
+
+    <div class="error" id="errorMsg">User not found! Check the username.</div>
+    <div class="loading" id="loading">Fetching profile...</div>
+
+    <div class="card" id="profileCard">
+      <div class="profile-top">
+        <img id="avatar" src="" alt="avatar" />
+        <div>
+          <div id="profileName"></div>
+          <div id="profileLogin"></div>
+        </div>
+      </div>
+
+      <div id="bio"></div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num" id="repos"></div>
+          <div class="stat-label">Repos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="followers"></div>
+          <div class="stat-label">Followers</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="following"></div>
+          <div class="stat-label">Following</div>
+        </div>
+      </div>
+
+      <a id="profileLink" href="#" target="_blank"></a>
+    </div>
+  </div>
+
+  <script src="GitFinder.js">
+  </script>
+</body>
+</html>
